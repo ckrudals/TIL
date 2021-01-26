@@ -46,6 +46,8 @@ SQL : Structured Query Language
 데이터 정의 : (DDL) CREATE,ALTER,DROP
 데이터 제어(DCL) 
 
+o2 : mysql 만들때 사용
+AUTO_INCREMENT : 명시적으로 지정하지않고, INSERT하면 자동추가 (1)
 SELECT [컬럼 이름]
 FROMP [테이블 이름 ]
 > 나는  [테이블 이름]에서 [컬럼 이름]을 선택한다
