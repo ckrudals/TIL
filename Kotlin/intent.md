@@ -36,3 +36,11 @@ intent2.apply{
 ~~~
 
 **Apply** 란 <br> 수신 객체 람다 내부에서 수신 객체의 함수를 사용하지 않고 수신 객체 자신을 다시 반환 하려는 경우에 apply 를 사용한다.
+
+--- 
+## 암시적 Intent
+~~~
+val intent=Intent(Intent.ACTION_VIEW,URI.PARSE("http://naver.com))
+~~~
+암시적 Intent란 -> 대상이 명확하지 않을 때 쓴다.
+ex) 네이버 를 열때, 크롬, 웨일 등등 명확하지 않을 때 쓴다.
