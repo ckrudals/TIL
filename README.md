@@ -17,5 +17,10 @@
 ## 2021-02-21
 <h4>[Android : ViewPager2 어떻게 써야할까?](https://happy-kmc.tistory.com/11)</h4>
 
+---
+## 2021-02-22
+<h4>[자료구조] 순차 탐색 알고리즘과 시간 복잡도 를 계산해보자.(https://happy-kmc.tistory.com/12)</h4>
+
+
 
 
