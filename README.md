@@ -21,6 +21,9 @@
 ## 2021-02-22
 <h4>[자료구조] 순차 탐색 알고리즘과 시간 복잡도 를 계산해보자.(https://happy-kmc.tistory.com/12)</h4>
 
+---
+## 2021-02-22
+<h4>[Android] MVVM 패턴이란 무엇인가(https://happy-kmc.tistory.com/13)</h4>
 
 
 
