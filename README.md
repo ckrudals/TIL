@@ -24,6 +24,10 @@
 ---
 ## 2021-02-22
 <h4>[Android] MVVM 패턴이란 무엇인가(https://happy-kmc.tistory.com/13)</h4>
+---
+## 2021-03-9
+<h4>[Android] 	
+[Android] Android (Singleton patton) 이란 무엇인가 ?(https://happy-kmc.tistory.com/14)</h4>
 
 
 
