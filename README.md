@@ -1,34 +1,30 @@
-## 그날 공부한 내용 
+# Today I Learned
+하루동안 공부하거나 찾아본거 및 삽질한 것을 정리해보자 !
+## 분류
 
----
-## 2021-02-19
-<h4>[Android : Room 어떻게 써야할까?](https://happy-kmc.tistory.com/3)</h4>
+### Android
+- [Android 유용한 정보 모음](https://github.com/ckrudals/TIL/blob/main/Android/Android.md)
+- [MVVM 패턴 정리](https://github.com/ckrudals/TIL/blob/main/Android/MVVM.md)
+- [DI 정리](https://github.com/ckrudals/TIL/blob/main/Android/di.md)
+- [Singleton 정리](https://github.com/ckrudals/TIL/blob/main/Android/singlton.md)
+- [Intent 정리](https://github.com/ckrudals/TIL/blob/main/Kotlin/intent.md)
+### Kotlin
 
----
-## 2021-02-20
-<h4>[DB : 데이터베이스란 무엇일까 ?](https://happy-kmc.tistory.com/4)</h4>
-<h4>[DB 데이터베이스의 기능들에는 어떤 것이 있을까? (검색과 갱신)](https://happy-kmc.tistory.com/5)</h4>
-<h4>[DB : 데이터베이스의 기능 2 (동시성 제어)](https://happy-kmc.tistory.com/7)</h4>
-<h4>[DB : 데이터베이스의 기능 3 (장애 대응)(https://happy-kmc.tistory.com/8)</h4>
-<h4>[DB : 데이터베이스의 기능 4 (보안)](https://happy-kmc.tistory.com/9)</h4>
-<h4>[DB : 데이터베이스의 종류](https://happy-kmc.tistory.com/10)</h4>
 
----
-## 2021-02-21
-<h4>[Android : ViewPager2 어떻게 써야할까?](https://happy-kmc.tistory.com/11)</h4>
 
----
-## 2021-02-22
-<h4>[자료구조] 순차 탐색 알고리즘과 시간 복잡도 를 계산해보자.(https://happy-kmc.tistory.com/12)</h4>
+### Jetpack
+- [ViewModel 예제](https://github.com/ckrudals/TIL/tree/main/Jetpack)
 
----
-## 2021-02-22
-<h4>[Android] MVVM 패턴이란 무엇인가(https://happy-kmc.tistory.com/13)</h4>
 
----
-## 2021-03-9
-<h4>[Android] 	
-[Android] Android (Singleton patton) 이란 무엇인가 ?(https://happy-kmc.tistory.com/14)</h4>
+### back-end
+
+
+
+
+### DATABASE
+
+
+
 
 
 
