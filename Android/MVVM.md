@@ -13,7 +13,7 @@
 <br>
 
 > MVC와 MVVM의 차이점..
-<img src="190316-mvc-mvvm.png">
+<img src="../Image/190316-mvc   -mvvm.png">
 <br>
 
 # MVVM 패턴을 왜 공부해야 할까? 🙄
@@ -33,13 +33,13 @@
  
   ## View
 
-- <h3> 안드로이드의 **UI** 를 담당하는 프래그먼트, 액티비티를 의미한다.</h3> 
+- <h3> 안드로이드의 UI 를 담당하는 프래그먼트, 액티비티를 의미한다.</h3> 
 - <h3>화면에 그릴 것을 결정하고, 사용자와 상호작용 한다.</h3>
 - <h3>데이터 변화를 감지하는 옵저버를 가지고 있다. </h3>
 
 <h2> ViewModel</h2>
 
-- <h3>**UI**를 그리는 데이터를 가지고 있으며, 변경되어도 괜찮다.</h3>
+- <h3> UI를 그리는 데이터를 가지고 있으며, 변경되어도 괜찮다.</h3>
 
 > 예제 소스
 <h3>
@@ -85,8 +85,8 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application) {
 
 <h2> LiveData</h2>
 
-- <h3>**Observer** 형식으로, 데이터 변경이 일어나면 감지가 가능하다.</h3>
-- <h3>**UI** 와 데이터를 일치 시킬 수 있다.</h3>
+- <h3>Observer 형식으로, 데이터 변경이 일어나면 감지가 가능하다.</h3>
+- <h3>UI 와 데이터를 일치 시킬 수 있다.</h3>
 
 <h2> Repository </h2>
 
