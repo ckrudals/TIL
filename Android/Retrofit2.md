@@ -39,7 +39,7 @@
   기본인자는 무조건 다 써야 하지만, 신청인자는 필요한 것만 적어도 됩니다.
   ~~~
 
-  ![postMan](./../Image/retrofit2.png)
+  ![postMan](../Image/postMan.png)
 
   > - KEY : 인증키
   > - Type : 타입 (JSON, XML 등)
@@ -91,7 +91,7 @@
 
 이제 이것을 dataClass로 바꿔줘야합니다. 
 이것을 바꿔주는 라이브러리가 있습니다.
-  ![라이브러리](./../Image/Json_to_kotlin.png)
+  ![라이브러리](../Image/json_kotlin.png)
   이 라이브러리를 사용하면 Json만 넘겨준다면 자동으로 DataClass로 바꿔줘야합니다.
 
 ### 그리고 API Interface를 만들어 줘야합니다.
