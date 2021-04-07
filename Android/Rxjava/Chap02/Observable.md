@@ -337,3 +337,55 @@ fun main(){
 *결과*
     
 ```위와 같음```
+
+> BlockingQueue
+```kotlin
+class ObservableFromIterable {
+    fun blockingQueueExample() {
+        val orderQueue : BlockingQueue<Order> = ArrayBlockingQueue(100)
+        orderQueue.add(Order("ORD-1"))
+        orderQueue.add(Order("ORD-2"))
+        orderQueue.add(Order("ORD-3"))
+
+        val source = Observable.fromIterable(orderQueue)
+        source.subscribe { order -> println(order.id)}
+    }
+}
+
+fun main() {
+    val demo = ObservableFromIterable()
+    demo.blockingQueueExample()
+}
+```
+
+>Order class
+```Java
+public class Order {
+
+    private String mId;
+
+    public Order(String id) {
+        mId = id;
+    }
+
+    public String getId() {
+        return mId;
+    }
+
+    @Override
+    public String toString() {
+        return "Order ID : "+mId;
+    }
+}
+```
+
+``` 결과
+ORD-1
+ORD-2
+ORD-3
+```
+
+BlockingQueue 객체는 구현 클래스로 ArrayBlockingQueue를 사용했고, 최대 대기열수는 100개로 저장했다.  그리고 ORD-1 에서 3까지 입력했으므로 출력 결과는 Order 객체의 ID를 출력한다.
+
+> ### 왜 map 객체에 관한 Observable 클래스의 from() 함수는 없을까?
+>> Map 인터페이스는 배열도 아니고 Iteable< E > 인터페이스를 구현하지 않았으므로 from() 계열 함수는 존재하지 않는다.  
