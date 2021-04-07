@@ -82,7 +82,7 @@ Observable 계약에 따르면 Observable이 onComplete 알림을 보냈을 때 
 따라서 onCompose 이벤트가 끝나면 구독자가 별도로 dispose()를 호출할 필요가 없다.
 
 
-코드
+>*코드*
 ```kotlin
    class ObservableNotificationsKotlin {
 
@@ -104,7 +104,7 @@ fun main() {
     demo.emit()
 
 ```
-출력
+>*출력*
 ``` kotlin
 onNext() : value : RED
 onNext() : value : GREEN
@@ -141,7 +141,7 @@ just() vs create()
 
 [FirstExampleJava](#just함수) 예제와 다르게 Observable(Integer) 타입의 변수를 분리했는데 source 변수는 차가운 Observable입니다. 즉 첫 번째 문장으로는 실행이 안되고, 두 번째 subscribe() 함수를 호출 호출 했을 때 값이 찍힙니다. 만약 호출을 안하면 값이 안찍힙니다.
 
->코드
+>*코드*
 ```kotlin
 class ObservableCreateExampleKotlin {
 
@@ -162,7 +162,7 @@ fun main() {
 }
 ```
 
->출력
+>*출력*
 ```kotlin
 Result : 100
 Result : 200
@@ -240,3 +240,31 @@ public class subscribeAnonymously {
 - 2. 구독자가 구독하는 동안에만 onNext와 onComplete 이벤트를 호출해야 한다.
 - 3. 애러가 발생하면 onError 이벤트로만 에러를 전달해야 한다.
 - 4. 배압을 직접 처리해야 한다.
+
+### fromArray 함수
+
+just() 함수나 create() 함수는 단일 데이터를 처리한다. 여러 데이터를 처리해야할 때는 fromXXX 계열 함수를 사용한다.
+
+그중에 fromArray() 함수로 배열에 있는 데이터 값을 처리해보자
+>*코드*
+~~~kotlin 
+class ObservableFromArrayKotlin {
+    fun emit(){
+    val arr= arrayOf(100,200,300);
+        val source= Observable.fromArray(*arr);
+        source.subscribe(System.out::println);
+    }
+}
+
+fun main() {
+    val demo=ObservableFromArrayKotlin()
+    demo.emit()
+}
+~~~
+>*결과*
+~~~kotlin
+100
+200
+300
+~~~
+데이터가 차례대로 발행이 된다.
