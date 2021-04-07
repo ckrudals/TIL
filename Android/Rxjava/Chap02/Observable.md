@@ -268,3 +268,72 @@ fun main() {
 300
 ~~~
 데이터가 차례대로 발행이 된다.
+
+### fromlterable
+
+Observable을 만드는 방법들 중 하나는 Iterable 인터페이스를 구현한 클래스에서 Observable 객체를 생성하는 것이다. 반복자를 반환한다.
+
+>Interagtor 인터페이스는 이터레이터 패턴을 구현한 것이므로, 
+데이터의 값의 확인 여부와 얻어노는 것만 관여할 뿐 데이터타입에 의존하지 않는다.
+
+Interable<E> 인터페이스를 구현하는 대표적인 클래스는
+- ArrayList
+- ArrayBlockingQueue
+- LinkedList
+- Stack
+- TreeSet
+- Vector
+>>>등등이 있다..
+
+>*ArrayList 코드*
+~~~kotlin
+class ObservableFromIterableKotlin {
+
+    fun emit(){
+        val names=ArrayList<String>()
+        names.add("Jerry")
+        names.add("William")
+        names.add("Bob")
+
+        val source= Observable.fromIterable(names)
+        source.subscribe(System.out::println)
+    }
+}
+
+fun main() {
+    val demo=ObservableFromIterableKotlin()
+ demo.emit()
+}
+~~~
+
+*결과*
+~~~kotlin
+Jerry
+William
+Bob
+~~~
+
+>*Set 인터페이스 코드*
+
+~~~kotlin
+class ObservableFromIterableSetKotlin {
+
+    fun emit(){
+        val cities=HashSet<String>()
+        cities.add("Seoul")
+        cities.add("London")
+        cities.add("Paris")
+
+        val source= Observable.fromIterable(cities)
+        source.subscribe(System.out::println)
+    }
+}
+
+fun main(){
+    val demo = ObservableFromIterableSetKotlin()
+    demo.emit()
+}
+~~~
+*결과*
+    
+```위와 같음```
