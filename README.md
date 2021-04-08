@@ -9,6 +9,7 @@
 - [Singleton 정리](https://github.com/ckrudals/TIL/blob/main/Android/singlton.md)
 - [Intent 정리](https://github.com/ckrudals/TIL/blob/main/Kotlin/intent.md)
 - [Retrofit2 정리](Android/Retrofit2.md)
+- [ViewPager2 정리](Android/viewpager.md)
 ### Kotlin
 
 
@@ -27,12 +28,12 @@
 
 
 ### DATABASE
-- [Database 정의](https://github.com/ckrudals/TIL/blob/main/DataBase/database.md)
-- [DataBase 기능 (검색과 갱신)](https://github.com/ckrudals/TIL/blob/main/DataBase/db.md)
-- [Database (동시성 제어)](https://github.com/ckrudals/TIL/blob/main/SQL/database_skill..2.md)
-- [Database (보안)](https://github.com/ckrudals/TIL/blob/main/SQL/database_skill.4.md)
-- [Database (종류)](https://github.com/ckrudals/TIL/blob/main/SQL/database_Kinds.md)
-- [SQL (정의)](https://github.com/ckrudals/TIL/blob/main/DataBase/sql.md    )
+- [Database 정의](DataBase/database.md)
+- [DataBase 기능 (검색과 갱신)](DataBase/database_skill_1%20검색과%20갱신.md)
+- [Database (동시성 제어)](DataBase/database_skil.동시성제어.md)
+- [Database (보안](DataBase/database_skil.보안.md)
+- [Database (종류)](DataBase/database_종류.md)
+- [SQL (정의)](DataBase/sql.md)
 
 
 
