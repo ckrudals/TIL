@@ -339,7 +339,7 @@ fun main(){
 ```위와 같음```
 
 > BlockingQueue
-```kotlin
+```kotlin 
 class ObservableFromIterable {
     fun blockingQueueExample() {
         val orderQueue : BlockingQueue<Order> = ArrayBlockingQueue(100)
@@ -387,5 +387,39 @@ ORD-3
 
 BlockingQueue 객체는 구현 클래스로 ArrayBlockingQueue를 사용했고, 최대 대기열수는 100개로 저장했다.  그리고 ORD-1 에서 3까지 입력했으므로 출력 결과는 Order 객체의 ID를 출력한다.
 
-> ### 왜 map 객체에 관한 Observable 클래스의 from() 함수는 없을까?
+> #### 왜 map 객체에 관한 Observable 클래스의 from() 함수는 없을까?
 >> Map 인터페이스는 배열도 아니고 Iteable< E > 인터페이스를 구현하지 않았으므로 from() 계열 함수는 존재하지 않는다.  
+
+### fromCallable() 함수
+
+기존 자바에서 제공하는 비동기 클래스나 인터페이스에 대해 살펴보자
+
+자바 5에서 추가된 동시성 API인 Callable 인터페이스 이다.
+비동기 실행 후 call() 메서드를 반환한다.
+
+
+메서드가 하나고, 인자가 없다는 점에서 비슷하지만 실행 결과를 리턴하는 점에서 차이가 있다. 그리고 잠재적으로 다른 스레드에서 실행되는것을 의미하기도 한다.
+
+>코드
+```kotlin
+lass ObservableFromCallable {
+    fun emit() {
+        val callable = Callable {
+            Thread.sleep(1000)
+            "Hello Callable"
+
+        }
+        val source= Observable.fromCallable(callable)
+        source.subscribe(System.out::println)
+    }
+}
+
+fun main() {
+    val demo=ObservableFromCallable()
+    demo.emit()
+}
+```
+> 결과
+```kotlin
+Hello Callable
+```
