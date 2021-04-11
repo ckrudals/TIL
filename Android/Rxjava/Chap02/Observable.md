@@ -402,7 +402,7 @@ BlockingQueue 객체는 구현 클래스로 ArrayBlockingQueue를 사용했고, 
 
 >코드
 ```kotlin
-lass ObservableFromCallable {
+class ObservableFromCallable {
     fun emit() {
         val callable = Callable {
             Thread.sleep(1000)
@@ -423,3 +423,64 @@ fun main() {
 ```kotlin
 Hello Callable
 ```
+### fromFuture() 함수 
+Futcher 인터페이스는 동시성 API로 비동기 계산할 때 쓰인다.
+
+Executors 클래스의  단일 스레드 실행자 newSingleThreadExecutor() 뿐만 아니라 다양한 스레드 풀을 지원한다. Rxjava에서는 스케쥴러를 권장한다.
+
+> Future 객체에서 fromFuture() 함수를 사용해 Observable를 생성하는 방법
+>> *코드*
+```kotlin
+class ObservableFromFuture {
+    fun emit() {
+        val future = Executors.newSingleThreadExecutor().submit<String> {
+            Thread.sleep(1000)
+            "Hello Future"
+        }
+        val source= Observable.fromFuture(future)
+        source.subscribe(System.out::println)
+    }
+}
+
+fun main() {
+    val demo=ObservableFromFuture()
+    demo.emit()
+}
+```
+>*결과*
+
+```kotlin
+Hello Future
+```
+
+### fromPublisher() 함수 
+
+Publlisher는 FlowApi 일부이다.
+
+> fromPublisher() 함수를 이용한 *코드*
+```KOTLIN
+class ObservableFromIterableKotlin {
+
+    fun emit(){
+        val names=ArrayList<String>()
+        names.add("Jerry")
+        names.add("William")
+        names.add("Bob")
+
+        val source= Observable.fromIterable(names)
+        source.subscribe(System.out::println)
+    }
+}
+
+fun main() {
+    val demo=ObservableFromIterableKotlin()
+ demo.emit()
+}
+
+```
+> *결과*
+```kotlin
+Hello Observable.fromPublisher()
+```
+Publisher 인터페이스는 Rxjava와 패키지 이름이다르다. Observable은
+io.reactivex 패키지 인데 Publisher는 org.reactivestreams 이다.
