@@ -1,5 +1,18 @@
 ## Observable
 
+
+## Observable,Observable을 만드는 함수에 대해 알아보자.
+
+  - [Observable 이란?](#observable-란)
+  - [just 함수](#just함수)
+  - [subscribe()함수와 Disposable 객체](#subscribe-함수와-disposable-객체)
+  - [create 함수](#create-함수)
+  - [fromArray() 함수](#fromarray-함수)
+  - [fromIterable() 함수](#fromlterable)
+  - [fromCallable() 함수](#fromcallable-함수)
+  - [fromFuture() 함수](#fromfuture-함수)
+  - [fromPublisher() 함수](#frompublisher-함수)
+
 <img src="../Images/Rxjava1.xVS2,x.png">
 
  > RxJava 1.x에서는 Observable 만 있었지만 RxJava 2.x에서는 세분화 되었다.
@@ -10,6 +23,7 @@
 
   - Flowable 
 - Observable (관찰자) 아직 관찰되진 않았지만, 이론을 통하여 관찰할 가능성을 의미한다.
+  
 > 라이프 사이클은 존재하지 않는다.
 
 ### RxJava의 Observable은 세 가지의 알림을 구독자에게 전달한다.
@@ -19,6 +33,17 @@
  
 
 ## Observable Class의 함수들
+
+### Observable 란
+
+- Observable은 옵서버 패턴을 구현한다.
+-  옵서버 패턴은 객체의 상태를 관찰자(옵서버) 목록을 객체에 등록한다. 그리고 무언가 변경사항이 있을 때 호출하여 옵서버에 알려준다.
+-   라이프사이클은 존재하지 않은다.
+> Observable의 뜻? 
+>> 직관적으로 설명하자면 관찰자가 관찰하는 대상으로 말할 수 있다.
+
+>> Observed라는 단어가 관찰을 통해서 얻는 결과를 뜻한다면 Observale은 현재는 관찰하진 않았지만 관찰할 가능성이 있음을 의미한ㄷ.
+
 
 ### just함수
 
