@@ -484,22 +484,21 @@ Publlisher는 FlowApi 일부이다.
 
 > fromPublisher() 함수를 이용한 *코드*
 ```KOTLIN
-class ObservableFromIterableKotlin {
-
-    fun emit(){
-        val names=ArrayList<String>()
-        names.add("Jerry")
-        names.add("William")
-        names.add("Bob")
-
-        val source= Observable.fromIterable(names)
+class ObservableFromPublisher {
+    fun emit() {
+        val publisher = { s: Subscriber<in String?> ->
+            s.onNext("Hello Observable.fromPublisher()")
+            s.onComplete()
+        }
+        val source = Observable.fromPublisher(publisher)
         source.subscribe(System.out::println)
     }
 }
 
 fun main() {
-    val demo=ObservableFromIterableKotlin()
- demo.emit()
+    val demo = ObservableFromPublisher()
+    demo.emit()
+
 }
 
 ```
