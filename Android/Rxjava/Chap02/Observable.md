@@ -13,7 +13,7 @@
   - [fromFuture() 함수](#fromfuture-함수)
   - [fromPublisher() 함수](#frompublisher-함수)
 
-<img src="../Images/Rxjava1.xVS2,x.png">
+<img src="../Images/Rxjava1.xVS2,x.png" width="500dp" height="250dp">
 
  > RxJava 1.x에서는 Observable 만 있었지만 RxJava 2.x에서는 세분화 되었다.
 
@@ -42,7 +42,7 @@
 > Observable의 뜻? 
 >> 직관적으로 설명하자면 관찰자가 관찰하는 대상으로 말할 수 있다.
 
->> Observed라는 단어가 관찰을 통해서 얻는 결과를 뜻한다면 Observale은 현재는 관찰하진 않았지만 관찰할 가능성이 있음을 의미한ㄷ.
+>> Observed라는 단어가 관찰을 통해서 얻는 결과를 뜻한다면 Observale은 현재는 관찰하진 않았지만 관찰할 가능성이 있음을 의미한다.
 
 
 ### just함수
