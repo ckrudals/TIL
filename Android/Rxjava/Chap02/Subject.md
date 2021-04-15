@@ -79,4 +79,136 @@ fun main() {
 ``` 
 Subscriber #1 => 12.5
 ```
+onComplete() 함수를 호출한 후 구독
+> *코드* 
+```kotlin 
+class AsyncSubjectonCompleteKotlin {
+    fun emit() {
+        val subject = AsyncSubject.create<Int>()
+        subject.onNext(10)
+        subject.onNext(11)
+        subject.subscribe { data -> println("Subscriber #1 => $data") }
+        subject.onNext(12)
+        subject.onComplete()
+        subject.onNext(13)
+        subject.subscribe { data -> println("Subscriber #2 => $data") }
+        subject.subscribe { data -> println("Subscriber #3 => $data") }
 
+    }
+}
+
+fun main() {
+    val demo = AsyncSubjectExampleKotlin()
+    demo.emit()
+}
+```
+> 결과
+```kotlin
+Subscriber #1 => 12
+Subscriber #2 => 12
+Subscriber #3 => 12
+```
+
+완료되기전 마지막 데이터만 가지고 있으므로 12가 찍히낟.
+
+### BehaviorSubject 클래스
+
+BehaviorSubject는 구독을 하면 가장 최근 값 혹은 기본 값을 넘겨주는 클래스이다.
+
+> BehaviorSubject 클래스의 마블 다이어그램
+<img src="../Images/BehaviorSubject.png" width="500dp" height="300dp">
+
+여기서 '1'원은 BehaviorSubject 클래스를 생성할 때 넘긴 초기값이다.
+
+첫 번째 구족자에 초기값을 받고 다음에 '2' 원부터 수신한다.  
+
+두 번째 구독자는 '3' 원이 발행된 이후에 구독햇으므로 '3'원을 맨처음 발행한다.
+
+> *코드*
+``` kotlin
+class BehaviorSubjectKotlin {
+    fun emit(){
+        val subject= BehaviorSubject.createDefault("6")
+        subject.subscribe{data -> println("Subscriber #1 => $data")}
+        subject.onNext("1")
+        subject.onNext("3")
+        subject.subscribe{data -> println("Subscriber #2 => $data")}
+        subject.onNext("5")
+        subject.onComplete()
+    }
+}
+
+fun main() {
+    val demo=BehaviorSubjectKotlin()
+    demo.emit()
+}
+```
+> 결과
+ ``` kotlin
+Subscriber #1 => 6
+Subscriber #1 => 1
+Subscriber #1 => 3
+Subscriber #2 => 3
+Subscriber #1 => 5
+Subscriber #2 => 5
+```
+
+BehaviorSubject 는 다른 클래스와 다르게 createDefeault() 함수로 생성한다.
+
+구독자가 subscribe() 함수를 호추했을 때 그전까지 값이 없다면 기본 값으로 발행 해줘야 하기 때문이다.
+
+### PublishSubject 클래스
+
+가장 평범한 Subject 클래스 이다. 
+
+구족자가 Subscribe() 함수를 호출하면 값을 발행하기 시작한다. 
+
+마지막 값을 발행하거나, 기본 값을 대신 발행 하지도 않는다. 오직 해당 시간에 발행한 데이터를 그대로 구독자에게 전달한다.
+
+> PublishSubject 마블 다이어그램
+> 
+<img src="../Images/PublishSubject.png" width="500dp" height="300dp">
+
+> *코드*
+
+```kotlin
+class PublishSubjectKotlin {
+    fun emit() {
+        val subject = PublishSubject.create<String>()
+        subject.subscribe { data -> println("Subscriber #1 => $data ") }
+
+        subject.onNext("1")
+        subject.onNext("3")
+        subject.subscribe { data -> println("Subscriber #2 => $data ") }
+        subject.onNext("5")
+        subject.onComplete()
+    }
+}
+
+fun main() {
+    val demo=PublishSubjectKotlin()
+    demo.emit()
+}
+```
+> 결과
+``` kotlin
+Subscriber #1 => 1 
+Subscriber #1 => 3 
+Subscriber #1 => 5 
+Subscriber #2 => 5 
+```
+
+첫 번째 구독자는 Subject 클래스가 발행한 '1','3','5' 데이터를 모두 전달받으며, 두 번째 구독자는 구독한 이후에 발행된 데이터인 '5' 만 전달받는다.
+
+### ReplaySubject 클래스
+
+Subject 중에 가장 특이한 클래스이다. 
+
+Subject 클래스의 목적은 뜨거운 Observable을 활요하는 것인데 차가운 Observable 처럼 동작하기 때문이다.
+
+ReplaySubject 클래스는 구독자가 새로 생기면 항상 데이터의 처음부터 끝까지발행하는 것을 보장한다.
+
+그러므로 데이터를 저장하는 과정 중메모리 누수가 발생할 가능성을 염두에 두고 사용해야 한다
+>ReplaySubject 마블 다이어그램
+
+<img src="../Images/ReplaySubject.png" width="500dp" height="250dp">
