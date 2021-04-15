@@ -212,3 +212,36 @@ ReplaySubject 클래스는 구독자가 새로 생기면 항상 데이터의 처
 >ReplaySubject 마블 다이어그램
 
 <img src="../Images/ReplaySubject.png" width="500dp" height="250dp">
+
+> *코드*
+```kotlin
+class RelaySubjectKotlin {
+    fun emit() {
+        val subject = ReplaySubject.create<String>()
+        subject.subscribe { data: String -> println("Subscriber #1 => $data") }
+        subject.onNext("1")
+        subject.onNext("3")
+        subject.subscribe { data: String -> println("Subscriber #2 => $data") }
+        subject.onNext("5")
+        subject.onComplete()
+
+    }
+}
+
+
+    fun main() {
+        val demo = RelaySubjectKotlin()
+        demo.emit()
+    }
+
+```
+>결과
+```kotlin
+Subscriber #1 => 1
+Subscriber #1 => 3
+Subscriber #2 => 1
+Subscriber #2 => 3
+Subscriber #1 => 5
+Subscriber #2 => 5
+
+```
