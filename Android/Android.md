@@ -45,3 +45,5 @@ setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
   안드로이드 3.0 전까지만 해도 Activity 가 만능이였다. 하지만 시간이 흐를수록 비지니스 로직을 재사용할 방법이 필요했다. 이때 단일 액티비티가 거대해 지는 것을 막기 위해 프래그머트를 섞어서 사용했다.
 
   초반에는 많이 혼란스러웠다. Activity에서만 돌아가던 라이프사이클이 프래그먼트와 섞이면서 혼동이 일어난 것이다. 그래서 많이 어려워하고 문제점이 많았다.
+
+    android:ellipsize="end" size보다 텍스트가 더 길시에 ... 으로 뜬다,
