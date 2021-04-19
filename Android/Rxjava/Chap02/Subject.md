@@ -8,11 +8,16 @@ Observable 처럼 데이터를 발행할 수 있고,  구독자처럼 발행된 
 
 RxJava에서 제공하는 주요 Subject 클래스에는
 
-- AsyncSubject
-- BehaviorSubject
-- PublishSubject
-- ReplaySbject 가 있다.
+- [Subject 클래스](#subject-클래스)
+  - [AsyncSubject 클래스](#asyncsubject-클래스)
+  - [BehaviorSubject 클래스](#behaviorsubject-클래스)
+  - [PublishSubject 클래스](#publishsubject-클래스)
+  - [ReplaySubject 클래스](#replaysubject-클래스)
+  - [데이터 발생자와 수신자](#데이터-발생자와-수신자)
 
+> <-- 추가 내용 -->
+> 
+[데이터 발신자와 수진자](#데이터-발생자와-수신자)
 ### AsyncSubject 클래스
 AsyncSubject 클래스는 Observable에서 발행된 마지막 데이터를 얻어올 수 있다 그 이전 데이터는 무시한다.
 
@@ -245,3 +250,28 @@ Subscriber #1 => 5
 Subscriber #2 => 5
 
 ```
+
+ ### 데이터 발생자와 수신자
+
+|데이터 발행지(data source) |데이터 수신자|
+|------|---|
+|Observable|구독자(Subscriber)|
+|Single|옵서버(Observer)|
+|Maybe|소비자(Consumer|
+|Subject|
+|Completable|
+
+1. **구독자** Rxjava에서 Observable과 연결할 때는 subscribe() 함수를 호출합니다. 이 과정이 구독이므로 구독자가 된다.
+> subscribe 를 호출하는 행위가 구독 
+> 
+> 구독자는 호출당하는 대상?
+>  A -> Observable를 호출 A가  구독한다. A는 구독자
+2. **옵서버** : RxJava는 옵서버 패턴을 구현, 따라서 데이터 발신자는 Observable이 되고 데이터수신자를 옵서버라고 할 수 있다.
+> A -> Observable 패턴
+ 
+> A는 데이터 발신자, Observable 패턴은 데이터 발신자
+
+3. **소비자** : RxJava 1.x에서는 subscribe() 함수를 호출할 때 Subscriber 클래스를 인자로 넘겼지만 ,
+ 
+    RxJava 2에서는 모두 함수형 인터페이스인 Consumer를 인자로넘긴다. **이는 자바 8과 같은 이름을 사용하기 위해서다.**
+>  Rxjava 1.x subscribe() -> Subscriber 클래스 but Rxjava 2 subscribe() -> Consumer
