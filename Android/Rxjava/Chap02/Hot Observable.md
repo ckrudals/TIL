@@ -28,3 +28,5 @@ Observable에는 뜨거운 Observable과 차가운 Observable이 있다.
 배압을 고려해야한다. 배열이란 , 데이터를 발행하는 속도와 구독자가 처리하는 속도의 차이가 클 때 발생한다.
 
   
+차가운 Observable은 Observable을 선언하고 subscribe() 함수를 호출 x 실행 안됨
+뜨거운 Observable subscribe없어도 호출됨
