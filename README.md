@@ -14,7 +14,7 @@
 - ### Design Pattern
   - ### [MVVM 패턴 정리](https://github.com/ckrudals/TIL/blob/main/Android/MVVM.md)
   - ### [Singleton 정리](https://github.com/ckrudals/TIL/blob/main/Android/singlton.md)
-  - ### [MVC 정리](Android/mvc.md)
+  - ### [MVC 정리](Andrid/mvc.md)
   
 - ### Di
   - ### [Dagger2 정리](Android/Dagger2.md)
@@ -22,6 +22,8 @@
 
 
 ### Kotlin
+
+  - ### [MutubleList와 List의 차이 ](Language/Kotlin/mutableListVSList.md)
 
 
 ### Rxjava_kotlin
