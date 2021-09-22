@@ -1,19 +1,13 @@
 
+## Android 공부하면서 새로 알게된 계념을 정리하는 repo
+
 - BottomSheet 바텀 dialog
 
 
-출처:  [Crocus](https://www.crocus.co.kr/1672?category=22652) 화면 고정
+화면 회전하지 않으려면
 
-```xml
-<activity android:name="YourActivityName" 
-android:icon="@drawable/icon"
-android:label="Your App Name" 
-android:screenOrientation="landscape">
-```
-> 코드로 구현
-``` java
-setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-```
+ [화면 고정하기](https://www.crocus.co.kr/1672?category=22652)
+
 
 
 - jvm 이란 자바가상머진
@@ -46,4 +40,19 @@ setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
   초반에는 많이 혼란스러웠다. Activity에서만 돌아가던 라이프사이클이 프래그먼트와 섞이면서 혼동이 일어난 것이다. 그래서 많이 어려워하고 문제점이 많았다.
 
-    android:ellipsize="end" size보다 텍스트가 더 길시에 ... 으로 뜬다,
+
+android:ellipsize="end" size보다 텍스트가 뜬다.
+    
+시크바
+>rangeslider 
+
+popupwindow     ``` dialog```
+
+Textwatch와 AndroidStudio recyclerView filDter
+
+Android dependencies 에서 받아오는 라이브러리가 너무 많을 때 object로 모아서 가져올수있다!
+
+    
+### 데이터 스트림이란
+
+> 구체적 데이터 형식이 정해지지 않는
