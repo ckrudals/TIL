@@ -19,6 +19,10 @@ lazy 에서는
 ```
 
 - lateinit
+```kotlin
+    private lateinit var a : String
+    a="hello"
+```
 
 최초 사용시 초기화 하지 않지만 어떤 면에서는 lazy와 같은 효과를 낸다.
 
@@ -26,4 +30,8 @@ lazy 에서는
 
 ### 클래스와 인터페이스
 
-싱글턴 어떤 클래스에 객체가 하나만 있어야함 < 이런 인스턴스를 싱글턴
+싱글턴 어떤 클래스에 객체가 하나만 있어야함 < 이런 인스턴스를 싱글턴이라고 한다. 
+
+## map vs foreach
+
+map 형식은 새로운 list를 만들지만 foreach는 안그런다.
