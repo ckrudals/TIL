@@ -31,4 +31,36 @@ BBB
 
 내림차순 정렬
 
+### replace()
+
+String에서 찾고자 하는 문자열이 있으면 다른 문자열로 치환한다.
+
+```kotlin
+    val data="HELLO"
+    print( data.replace("H","F"))
+
+// FELLOW가 찍힌다.
+```
+
+### indices
+배열의 값 알수있다.
+
+
+### substring
+문자열 자르는 함수
+```kotlin
+val s="hello"
+print(s.substring(0..1))
+```
+### average
+
+평균 구하는 함수
+
+
+### fold
+
+### jotinToString
+배열 -> String으로 변환
+
+
 

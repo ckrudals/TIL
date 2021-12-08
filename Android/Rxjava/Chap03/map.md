@@ -70,7 +70,11 @@ Function 인터페이스 형식
 //    demo.mapFunction()
 //
 //}
+
+Function 인터페이스가 인식 못하는것 같다. import 가 안됨
 ```
-```결과
+결과
+```
 ???
 ```
+
