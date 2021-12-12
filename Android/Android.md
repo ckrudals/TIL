@@ -1,5 +1,5 @@
 
-## Android 공부하면서 새로 알게된 계념을 정리하는 repo
+## Android 공부하면서 새로 알게된 개념을 정리하는 repo
 
 - BottomSheet 바텀 dialog
 
@@ -56,3 +56,17 @@ Android dependencies 에서 받아오는 라이브러리가 너무 많을 때 ob
 ### 데이터 스트림이란
 
 > 구체적 데이터 형식이 정해지지 않는
+
+
+### Fragment onCreateView와 onViewCreate 차이
+
+onCreateView는 Activity의 onCreate처럼 view를 inflate 될때 사용되고,
+
+onViewCreate는 onCreateView가 return 된 직후 바로 실행되는 것은 onViewCreate에 써야한다.
+
+### mikephil
+chart 라이브러리
+
+### currentGradesInfoBalloon
+
+dialog 라이브러리
