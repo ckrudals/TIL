@@ -32,6 +32,18 @@ lazy 에서는
 
 싱글턴 어떤 클래스에 객체가 하나만 있어야함 < 이런 인스턴스를 싱글턴이라고 한다. 
 
-## map vs foreach
+### map vs foreach
 
 map 형식은 새로운 list를 만들지만 foreach는 안그런다.
+
+### matches
+정규표현식 함수
+
+### copyOfRagne
+배열을 원하는 인덱스 사이를 자를 수 있다.
+
+### slice
+지정된 위치의 element를 가진 새로운 list 를 만든다.
+
+### operator
+연산자를 Overloading 해줌
