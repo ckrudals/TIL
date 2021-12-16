@@ -9,7 +9,7 @@
 
 ### repeat 함수
 
-어떤 문자열을 주어진 횟수만큼 반복한다, 또한 어떤 함수를 주어진 횟수만큼 반복한다.  ㅇ
+어떤 문자열을 주어진 횟수만큼 반복한다, 또한 어떤 함수를 주어진 횟수만큼 반복한다.  
 
 
 ``` kotlin
@@ -58,9 +58,22 @@ print(s.substring(0..1))
 
 
 ### fold
+컬렉션 내의 데이터를 모으는 함수
+
+```kotlin
+val sumTotal = listOf(1,2,3,4,5).fold(0,{total,next -> total + next})
+println("sumTotal : ${sumTotal}" )
+// sumTotal : 15
+```
+초기값을 설정할 수 있고, 1부터 5까지 더한 15가 나온다.
+
 
 ### jotinToString
 배열 -> String으로 변환
+
+### zip
+
+두 List를 묶어 줄 수 있는 함수.
 
 
 
