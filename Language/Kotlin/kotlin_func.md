@@ -75,5 +75,18 @@ println("sumTotal : ${sumTotal}" )
 
 두 List를 묶어 줄 수 있는 함수.
 
+### partition
+어떤 원소에 특정 조건을 걸어서 부합하거나, 부합되지않는 것 이렇게 두리스트로 나뉘어진다.
+first에는 부합된 list, 부합되지 않은 것은 second로 간다.
+```kotlin
+fun main() {
+    val a: List<Int> = listOf(1, 2, 3, 4, 5, 6)
 
+    val partition = a.partition { it % 2 == 0 }
 
+    println(partition.first)   // 조건에 만족하는 녀석들
+    println(partition.second)  // 조건에 만족하지 않는 녀석들
+}
+[2, 4, 6]
+[1, 3, 5]
+```
